@@ -1,6 +1,6 @@
 #Odd Or Even (PHP)
 
-Handles the switch between 'odd' and 'even' flags in loops.
+Handles the switch between 'odd' and 'even' flags in loops. 
 
 ### Usage
 
@@ -10,7 +10,7 @@ First import the class:
 
 When you just want to know if it's odd or even:
 
-	OddOrEven::reset();
+	OddOrEven::reset(); // optional
 	while ( $xyz ) {
 	
 		// boolean check for odd
@@ -29,7 +29,9 @@ When you just want to know if it's odd or even:
 		
 	}
 
-If you have multiple loops you can specify a unique id for each loop:
+You'll note these are static calls, so they will bypass any scoping restrictions.
+
+If you have multiple loops or conflicting scopes you can specify a unique id for each counter:
 
 	OddOrEven::reset('outer');
 	while ($xyz)) {
